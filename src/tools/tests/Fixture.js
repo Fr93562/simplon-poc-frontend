@@ -1,7 +1,7 @@
 /**
  * renvoie un jeu de données pour les tests
  */
-export function getFixtures() {
+export function getFixtures(data) {
 
     let fixtures = [
         {
@@ -20,16 +20,23 @@ export function getFixtures() {
             "content": "Super et toi??"
         },
         {
-            "id": 6,
+            "id": 5,
             "username": "Sarah",
             "content": "Bien!"
         },
         {
-            "id": 5,
+            "id": 6,
             "username": "Mickael",
             "content": "Je te propose de sortir au restaurant ce soir."
         }
     ];
+
+    if(data != null) {
+
+        fixtures.push(data);
+    } 
+
+    console.log(fixtures.length);
 
     return fixtures;
 }

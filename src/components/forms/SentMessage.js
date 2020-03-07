@@ -1,10 +1,12 @@
 import React from 'react';
 
+import { sendMessage, requestMessage } from '../../tools/messages/requestMessage';
+
 export class SentMessage extends React.Component {
     constructor(props) {
       super(props);
       this.state = {value: '', operation: 'send'};
-  
+      
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -14,7 +16,11 @@ export class SentMessage extends React.Component {
     }
   
     handleSubmit(event) {
-      alert('Le nom a été soumis : ' + this.state.value + ' ' + this.state.operation);
+
+      //sendMessage(this.state.value);
+      // alert('Le nom a été soumis : ' + this.state.value + ' ' + this.state.operation);
+      requestMessage();
+
       event.preventDefault();
     }
   
@@ -28,4 +34,4 @@ export class SentMessage extends React.Component {
     }
   }
 
-  export default SentMessage;
+  export default SentMessage

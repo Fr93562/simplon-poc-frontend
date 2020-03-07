@@ -10,7 +10,8 @@ import { getFixtures, getUser } from './tools/tests/Fixture';
 
 function App() {
 
-  console.log(SentMessage);
+  console.log(getFixtures().length);
+
   return (
     <div className="App">
 
@@ -40,5 +41,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

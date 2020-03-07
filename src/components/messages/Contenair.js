@@ -9,6 +9,8 @@ import { Message } from './Message';
  */
 export function Contenair(props) {
 
+  console.log(props.messageData.length);
+
   const messageList = props.messageData;
   const listItems = messageList.map((messageAlone) =>
     
